@@ -13,220 +13,333 @@
 <body>
   {{ partial "navbar.html" . }}
   <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron" id="home">
+  <div id="home" class="jumbotron">
     <div class="container">
       <div class="media">
-        <!--      <a href="#" class="pull-right"><i class="fa fa-search fa-3x"></i></a> -->
         <div class="media-body">
           <div class="col-md-11">
             <div class="row">
-            <!--  <h1>
-                Sabayon
-                <span>Community Repositories</span>
-              </h1>-->
-              <br>
-              <p>Welcome to Sabayon Community Repositories!
-              </p>
-
-
-
+              <br />
+              <div>Welcome to Sabayon Community Repositories!</div>
               <div id="custom-search-input" class="col-md-12 typeahead__container">
-                            <div id="searchpkg"  class="input-group col-md-12 typeahead__field">
-                                    <span class="typeahead__query">  <input type="text" class="js-typeahead form-control" type="text" placeholder="Find Packages" />
-                                          </span>
-                                <span class="input-group-btn typeahead__button">
-                                    <button class="btn btn-info btn-md" type="button">
-                                        <i class="glyphicon glyphicon-search typeahead__search-icon"></i>
-                                    </button>
-                                </span>
-                            </div>
-                        </div>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <section class="services" id="SERVICE">
+                <div id="searchpkg" class="input-group col-md-12 typeahead__field">
+                  <span class="typeahead__query">
+                    <input type="text" class="js-typeahead form-control"
+                           placeholder="Find Packages" />
+                  </span><!-- .typeahead__query -->
+                  <span class="input-group-btn typeahead__button">
+                    <button class="btn btn-info btn-md" type="button">
+                      <i class="glyphicon glyphicon-search typeahead__search-icon"></i>
+                    </button><!-- .btn.btn-info.btn-md -->
+                  </span><!-- .input-group-btn.typeahead__button -->
+                </div><!-- #searchpkg.input-group.col-md-12.typeahead__field -->
+              </div><!-- .#custom-search-input.col-md-12.typeahead__container -->
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </div><!-- .row -->
+          </div><!-- .col-md-11 -->
+        </div><!-- .media-body -->
+      </div><!-- .media -->
+    </div><!-- .container -->
+  </div><!-- #home.jumbotron -->
+  <section id="SERVICE" class="services">
     <div class="container">
-
       <div class="row">
-
-        
         <h1>Sabayon Community Repositories</h1>
+        <div>
+          The Sabayon Community Repositories (SCR) is a
+          community-driven collection of repositories for Sabayon users.
+        </div>
+        <div>
+          It contains packages built and kept up-to-date by the
+          SCR Build System that allow you to install a package directly with equo.
+        </div>
+        <div>
+          The SCR was created to keep in a clean and well state the
+          Entropy main repositories, with the goal to reduce it's
+          size and impact.
+          The SCR is the infrastructure to organize and share new packages
+          from the community and to also build popular packages into the
+          community repository.
+        </div>
+        <div>
+          SCR contains mostly packages that can be found in Gentoo Overlays
+          (layman) and that cannot be maintained by the Sabayon Dev team.
+          In the SCR, users are able also to contribute their
+          own package builds (ebuilds and related files).
+          The SCR community has the ability to vote for or against
+          packages/repositories in the SCR Build System.
+          All the repositories provides packages in the binary form.
+        </div>
+        <div>
+          <strong>
+            DISCLAIMER: <i>SCR</i> packages are user produced content.
+            Any use of the provided files is at your own risk.
+            YOU HAVE BEEN WARNED.
+          </strong>
+        </div>
+        <hr />
 
-        The Sabayon Community Repositories (SCR) is a community-driven collection of repositories for Sabayon users.<br>
+        <h2>Website usage</h2>
+        <div>
+          Start to search on the top bar,
+          if the package is present a drop down menu will appear.
+          Click on the package you are interested in
+          and follow the steps to install in your box!
+        </div>
+        <hr />
 
-    It contains packages built and kept up-to-date by the SCR Build System that allow you to install a package directly with equo.<br>
+        <h1>TL;DR</h1>
+        <div>
+          Information and how-to use:
+          <a href="https://wiki.sabayon.org/index.php?title=En:Sabayon_Community_Repositories">Wiki page</a>
+          Packages requests:
+          <a href="https://bugs.sabayon.org/enter_bug.cgi?product=Community%20Repositories">Bugzilla section</a>
+          Guidelines and Bylaws (for SCR Devs):
+          <a href="https://github.com/Sabayon/scr-docs">scr-docs Github repository</a>
+        </div>
+        <hr />
 
-    The SCR was created to keep in a clean and well state the Entropy main repositories, with the goal to reduce it's size and impact. The SCR is the infrastructure to organize and share new packages from the community and to also build popular packages into the community repository.<br>
-
-  SCR contains mostly packages that can be found in Gentoo Overlays (layman) and that cannot be maintained by the Sabayon Dev team. In the SCR, users are able also to contribute their own package builds (ebuilds and related files). The SCR community has the ability to vote for or against packages/repositories in the SCR Build System. All the repositories provides packages in the binary form.<br>
-
-        <b>DISCLAIMER: <i>SCR</i> packages are user produced content. Any use of the provided files is at your own risk. YOU HAVE BEEN WARNED.</b>
-<br>
-<hr>
-       <h2> Website usage </h2>
-       Start to search on the top bar, if the package is present a drop down menu will appear. Click on the package you are interested in and follow the steps to install in your box!
-
-
-<hr>
-<h1> TL;DR </h1>
-Information and how-to use: <a href="https://wiki.sabayon.org/index.php?title=En:Sabayon_Community_Repositories">Wiki page</a>
-Packages requests: <a href="https://bugs.sabayon.org/enter_bug.cgi?product=Community%20Repositories">Bugzilla section</a>
-Guidelines and Bylaws (for SCR Devs): <a href="https://github.com/Sabayon/scr-docs">scr-docs Github repository</a>
-
-<hr>
-        <h1> SCR Developers </h1>
-
-        SCR Developers(SCRD) are members of the community charged with keeping the SCR in working order.
-        They maintain popular packages (communicating with and sending patches upstream as needed), and vote in administrative matters.<br>
-        A SCRD is elected from active community members by current SCRDs in a democratic process.
-        SCRDs are the only members who have a final say in the direction of the SCR.<br>
+        <h1>SCR Developers</h1>
+        <div>
+          SCR Developers(SCRD) are members of the community charged
+          with keeping the SCR in working order.
+          They maintain popular packages
+          (communicating with and sending patches upstream as needed),
+          and vote in administrative matters.
+        </div>
+        <div>
+          A SCRD is elected from active community members by current SCRDs
+          in a democratic process.
+          SCRDs are the only members who have a final say in the direction
+          of the SCR.
+        </div>
 
         <h1>Package Requests</h1>
-        To fill a Package request <a href="https://bugs.sabayon.org/enter_bug.cgi?product=Community%20Repositories">file a bug</a> in the Sabayon Bugzilla.<br><br>
-        There are three types of requests that can be filed that will be considered by a SCRD:<br>
-        <ul>
-          <li><b>Orphan Request</b>: Request a package to be disowned, e.g. when the maintainer is inactive and the package has been flagged out-of-date for a long time.</li>
-          <li><b>Deletion Request</b>: Request a package to be removed from the Community repository in SCR. Please do not use this if a package is broken and can be fixed easily. Instead, contact the package maintainer and file orphan request if necessary.</li>
-          <li><b>Add a package</b>: Request a package to be inside Community SCR. SCRD will decide what to do then, if you intend to mantain it, specify it in the issue.</li>
-        </ul>
-        <br><br>
-
-        <h2>Submitting Packages</h2>
-        You can <a href="https://github.com/Sabayon/community-repositories/pulls">open a Pull request</a> at the Sabayon/community-repositories Github Repository with the suggested changes.<br>
-        <h2>Discussion</h2>
-        General discussion regarding the Sabayon Community Repositories (SCR) and SCRD structure takes place on <a href="/chat">#sabayon-dev on IRC at chat.freenode.net</a>. For discussions related to the development of the SCR website, open an issue at <a href="https://github.com/Sabayon/community-website">the Github Repository</a>. use the <a href="https://lists.sabayon.org/mailman/listinfo/devel">sabayon-dev mailing list</a> for general discussions about SCR.
-        <h2>Bug Reporting</h2>
-        If you find a bug in the SCR web interface, please fill out a bug report on our bug tracker. Use the tracker to report bugs in the SCR web interface only. To report packaging bugs contact the package maintainer or leave a comment on the appropriate package page.
-
-</div>
-
-
-
-    </div>
-  </section>
-
-
-  <div class="modal fade bs-example-modal-lg" id="addRepository" tabindex="-1" role="dialog" aria-labelledby="RepositoryLabel">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-
-
-
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="RepositoryLabel">Install <span class="package"></span></h4>
+        <div>
+          To fill a Package request
+          <a href="https://bugs.sabayon.org/enter_bug.cgi?product=Community%20Repositories">file a bug</a>
+          in the Sabayon Bugzilla.
+        </div>
+        <div><br /></div>
+        <div>
+          There are three types of requests that can be filed that will be considered by a SCRD:
+          <ul>
+            <li>
+              <strong>Orphan Request</strong>:
+              Request a package to be disowned,
+              e.g. when the maintainer is inactive and
+              the package has been flagged out-of-date for a long time.
+            </li>
+            <li>
+              <strong>Deletion Request</strong>:
+              Request a package to be removed from the
+              Community repository in SCR.
+              Please do not use this if a package is broken and
+              can be fixed easily.
+              Instead, contact the package maintainer and
+              file orphan request if necessary.
+            </li>
+            <li>
+              <strong>Add a package</strong>:
+              Request a package to be inside Community SCR.
+              SCRD will decide what to do then, if you intend to mantain it,
+              specify it in the issue.
+            </li>
+          </ul>
         </div>
 
+        <h2>Submitting Packages</h2>
+        <div>
+          You can
+          <a href="https://github.com/Sabayon/community-repositories/pulls">open a Pull request</a>
+          at the Sabayon/community-repositories Github Repository
+          with the suggested changes.
+        </div>
 
+        <h2>Discussion</h2>
+        <div>
+          General discussion regarding the Sabayon Community Repositories (SCR)
+          and SCRD structure takes place on
+          <a href="/chat">#sabayon-dev on IRC at chat.freenode.net</a>.
+          For discussions related to the development of the SCR website,
+          open an issue at
+          <a href="https://github.com/Sabayon/community-website">the Github Repository</a>.
+          Use the
+          <a href="https://lists.sabayon.org/mailman/listinfo/devel">sabayon-dev mailing list</a>
+          for general discussions about SCR.
+        </div>
+
+        <h2>Bug Reporting</h2>
+        <div>
+          If you find a bug in the SCR web interface,
+          please fill out a bug report on our bug tracker.
+          Use the tracker to report bugs in the SCR web interface only.
+          To report packaging bugs contact the package maintainer or
+          leave a comment on the appropriate package page.
+        </div>
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </section><!-- #SERVICE.services -->
+
+  <div id="addRepository" class="modal fade bs-example-modal-lg" tabindex="-1"
+       role="dialog" aria-labelledby="RepositoryLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"
+                  aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button><!-- .close -->
+          <h4 id="RepositoryLabel" class="modal-title">
+            Install <span class="package"></span>
+          </h4><!-- #RepositoryLabel.modal-title -->
+        </div><!-- .modal-header -->
 
         <div class="modal-body">
-          To install this package you have to enable the <code><span class="repository"></span></code> repository available in <b>SCR</b>. <br><br>
-          <b>1) First, be sure to have weekly repositories disabled, and main installed:</b><br><br>
+          <div>
+            To install this package you have to enable the
+            <code><span class="repository"></span></code>
+            repository available in <strong>SCR</strong>.
+          </div>
+          <ol>
+            <li>
+              <div>
+                <strong>
+                  First, be sure to have weekly repositories disabled,
+                  and main installed:
+                </strong>
+              </div>
+              <div>
 <pre>
 sudo mv /etc/entropy/repositories.conf.d/entropy_sabayonlinux.org{.example,}
 sudo equo repo disable sabayon-weekly
 sudo equo repo enable sabayonlinux.org
 </pre>
-<br>
-          <b>2) Install <code>enman</code>, the Entropy repository manager and add the repository: (skip if you have already added this repository)</b><br>
-            <br>
+              </div>
+              <div><br /></div>
+            </li>
+            <li>
+              <div>
+                <strong>
+                  Install <code>enman</code>,
+                  the Entropy repository manager and add the repository:
+                  (skip if you have already added this repository)
+                </strong>
+              </div>
+              <div>
 <pre>
 sudo equo i enman
 sudo enman add <span class="repository"></span>
 </pre>
-
-<br><br>
-
-<b>3) Now let's upgrade the Entropy database and install the package:</b>
+              </div>
+              <div><br /></div>
+            </li>
+            <li>
+              <div>
+                <strong>
+                  Now let's upgrade the Entropy database and install the package:
+                </strong>
+              </div>
+              <div>
 <pre>
 sudo equo up
 sudo equo install <span class="package"></span>
 </pre>
-
-        </div>
-
-
-
+              </div>
+            </li>
+          </ol>
+        </div><!-- .modal-body -->
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Ok!</button>
-        </div>
-      </div>
-    </div>
-  </div>
+          <button class="btn btn-default" type="button"
+                  data-dismiss="modal">
+              Ok!
+          </button><!-- .btn.btn-default -->
+        </div><!-- .modal-footer -->
+      </div><!-- .modal-content -->
+    </div><!-- .modal-dialog.modal-lg -->
+  </div><!-- #addRepository.modal.fade.bs-example-modal-lg -->
 
-
-
-      <section class="services" id="getit">
-        <div class="container">
-          <div class="row"><center><h2> Our sponsors: </h2></center><br></div>
-          <div class="row">
-              <div class="col-md-4">
-                <div class="col-md-2">
-                  <img src="/img/sponsor/unitn.png">
-                </div>
-                <div class="col-md-10"><small><b>University of Trento</b><br>
-                    Sponsors Sabayon by housing our Entropy build server inside CISCA.</small>
-                </div>
+  <section id="getit" class="services">
+    <div class="container">
+      <div class="row">
+        <center><h2>Our sponsors:</h2></center>
+      </div><!-- .row -->
+      <div class="row">
+        <div class="col-md-4">
+          <div class="col-md-2">
+            <img src="/img/sponsor/unitn.png" alt="Logo University of Trento" />
+          </div><!-- .col-md-2 -->
+          <div class="col-md-10">
+            <small>
+              <div><strong>University of Trento</strong></div>
+              <div>
+                Sponsors Sabayon by housing
+                our Entropy build server inside CISCA.
               </div>
-              <div class="col-md-4">
-                <div class="col-md-2">
-                  <img src="/img/sponsor/bicocca.png">
-                </div>
-                <div class="col-md-10">
-                  <small><b>University of Milano-Bicocca</b><br>
-    Sponsors Sabayon by housing our Entropy build servers and WWW inside DISCo</small>
-                </div>
+            </small>
+          </div><!-- .col-md-10 -->
+        </div><!-- .col-md-4 -->
+        <div class="col-md-4">
+          <div class="col-md-2">
+            <img src="/img/sponsor/bicocca.png" alt="Logo University of Milano-Bicocca" />
+          </div><!-- .col-md-2 -->
+          <div class="col-md-10">
+            <small>
+              <div><strong>University of Milano-Bicocca</strong></div>
+              <div>
+                Sponsors Sabayon by housing
+                our Entropy build servers and WWW inside DISCo.
               </div>
-              <div class="col-md-4">
-                <div class="col-md-2">
-                  <img src="/img/sponsor/unibs.png">
-                </div>
-                <div class="col-md-10">
-                <small><b>  University of Brescia</b><br>
-                  Housing our Entropy build server inside the Faculty Network Center at the Department of Electronics.      </small>        </div>
+            </small>
+          </div><!-- .col-md-10 -->
+        </div><!-- .col-md-4 -->
+        <div class="col-md-4">
+          <div class="col-md-2">
+            <img src="/img/sponsor/unibs.png" alt="Logo University of Brescia" />
+          </div><!-- .col-md-2 -->
+          <div class="col-md-10">
+            <small>
+              <div><strong>University of Brescia</strong></div>
+              <div>
+                Housing our Entropy build server inside
+                the Faculty Network Center at the Department of Electronics.
               </div>
-
-          </div>
-          <div class="row">
-              <div class="col-md-4">
-                      <div class="col-md-6">
-                <img src="/img/sponsor/topix.png">
-  </div>
-                    <div class="col-md-6">  <small><b>
-                      Top-ix.org Development Program</b></small> </div>
-              </div>
-              <div class="col-md-4">
-                  <div class="col-md-6">  <img src="/img/sponsor/nlnet.png"></div>
-                <div class="col-md-6">
-               <small><b>    NLNet Foundation</b></small>
-                </div>
-              </div>
-              <div class="col-md-4">
-
-              </div>
-
-          </div>
-          <div class="row"><br><br></div>
-          <div class="row"><br><br></div>
-
-        </div>
-      </section>
-
-
-    {{ partial "footer.copyright.html" . }} {{ partial "footer.html" . }}
-    <script src="/js/jquery.typeahead.min.js"></script>
+            </small>
+          </div><!-- .col-md-10 -->
+        </div><!-- .col-md-4 -->
+      </div><!-- .row -->
+      <div class="row">
+        <div class="col-md-4">
+          <div class="col-md-6">
+            <img src="/img/sponsor/topix.png" alt="Logo Top-ix" />
+          </div><!-- .col-md-6 -->
+          <div class="col-md-6">
+            <small><strong>Top-ix.org Development Program</strong></small>
+          </div><!-- .col-md-6 -->
+        </div><!-- .col-md-4 -->
+        <div class="col-md-4">
+          <div class="col-md-6">
+            <img src="/img/sponsor/nlnet.png" alt="Logo NLNet Foundation" />
+          </div><!-- .col-md-6 -->
+          <div class="col-md-6">
+            <small><strong>NLNet Foundation</strong></small>
+          </div><!-- .col-md-6 -->
+        </div><!-- .col-md-4 -->
+        <div class="col-md-4"></div>
+      </div><!-- .row -->
+      <div class="row"><br /><br /></div>
+      <div class="row"><br><br></div>
+    </div><!-- .container -->
+  </section><!-- #getit.services -->
+  {{ partial "footer.copyright.html" . }} {{ partial "footer.html" . }}
+  <script src="/js/jquery.typeahead.min.js"></script>
