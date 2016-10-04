@@ -14,7 +14,8 @@ $(document).ready(function() {
         var modal;
 
         modal = $('#addRepository');
-        modal.find('.package').text(metadata.package);
+        modal.find('span.package').text(metadata.package);
+        modal.find('#PackageName').attr('value', metadata.package);
         modal.find('.repository').text(metadata.repository);
         modal.find('.packagearch').text(metadata.arch);
         modal.modal();
@@ -69,4 +70,11 @@ $(document).ready(function() {
         url: "https://scrmirror.sabayonlinux.org/mirrors/sabayonlinux/community/metadata.json",
         dataType: "jsonp",
     });
+
+    if ('execCommand' in document) {
+        $('#PackageName').on('focus', function() {
+            $(this).select();
+            document.execCommand('copy');
+        });
+    }
 });

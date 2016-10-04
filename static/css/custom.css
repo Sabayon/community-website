@@ -126,9 +126,17 @@ input {
 }
 
 .arch {
-  color: orange;
+    color: orange;
 }
 
 .modal {
-color: black;
+    color: black;
+}
+
+#RepositoryLabel {
+    display: inline-block;
+}
+
+#PackageName {
+    border: none;
 }
