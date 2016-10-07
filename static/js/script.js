@@ -13,14 +13,15 @@ $(document).ready(function() {
     typeaheadOnClickCallback = function($searchInput, $resultItem, metadata) {
         var modal;
 
+        adaptLocation(metadata.package);
+
         modal = $('#addRepository');
-        modal.find('span.package').text(metadata.package);
-        modal.find('#PackageName').attr('value', metadata.package);
+        modal.find('.package').text(metadata.package);
+        modal.find('a.package').attr('value', location.href);
+        modal.find('#PackageName').attr('value', location.href);
         modal.find('.repository').text(metadata.repository);
         modal.find('.packagearch').text(metadata.arch);
         modal.modal();
-
-        adaptLocation(metadata.package);
     };
 
     typeaheadReadyCallback = function(data) {
@@ -72,9 +73,14 @@ $(document).ready(function() {
     });
 
     if ('execCommand' in document) {
-        $('#PackageName').on('focus', function() {
-            $(this).select();
+        $('#RepositoryLabel').on('click', function() {
+            var $copyInput;
+
+            $copyInput = $('#PackageName');
+            $copyInput.attr('type', 'text');
+            $copyInput.select();
             document.execCommand('copy');
+            $copyInput.attr('type', 'hidden');
         });
     }
 });
