@@ -1,5 +1,8 @@
 $(document).ready(function() {
-    var template, typeaheadOnClickCallback, typeaheadReadyCallback, adaptLocation;
+    'use strict';
+
+    var template, typeaheadOnClickCallback, typeaheadResultCallback,
+        typeaheadReadyCallback, adaptLocation;
 
     template = [
         '<span>{{package}} ',
@@ -25,10 +28,20 @@ $(document).ready(function() {
         modal.modal();
     };
 
+    typeaheadResultCallback = function(node, query, result) {
+        if (query === '') { return; }
+
+        if (result.length === 0) {
+            $('.result-container').text('No results found :-(');
+        } else {
+            $('.result-container').text('');
+        }
+    };
+
     typeaheadReadyCallback = function(data) {
         var packageName, packageMetadata;
 
-        if (location.hash != '') {
+        if (location.hash !== '') {
             packageName = location.hash.slice(1);
 
             packageMetadata = data.filter(function(metadata) {
@@ -45,7 +58,7 @@ $(document).ready(function() {
         location.hash = '#' + packagename;
     };
 
-    parsePackages = function(data) {
+    window.parsePackages = function(data) {
         $('#searchpkg .js-typeahead').typeahead({
             order: "asc",
             dynamic: !0,
@@ -59,6 +72,7 @@ $(document).ready(function() {
             },
             callback: {
                 onClick: typeaheadOnClickCallback,
+                onResult: typeaheadResultCallback,
                 onReady: function(node) {
                     typeaheadReadyCallback(data);
                 }

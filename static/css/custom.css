@@ -82,16 +82,44 @@ input {
 }
 
 /* Our Custom stuff */
-#custom-search-input{
+#custom-search-input {
     padding: 3px;
     border: solid 1px #E4E4E4;
     border-radius: 6px;
     background-color: #fff;
 }
 
+#custom-search-input .typeahead__cancel-button {
+    z-index: 3;
+}
+
 #custom-search-input input{
     border: 0;
     box-shadow: none;
+}
+
+@media (min-width: 768px) {
+    #custom-search-input input{
+        width: calc(100% - 12em);
+    }
+}
+
+#custom-search-input .result-container {
+    display: none;
+}
+
+#custom-search-input.cancel .result-container {
+    display: table-cell;
+    font-size: 14px;
+    float: left;
+    height: 32px;
+    margin-right: 16px; /* cancel button is 16px wide */
+    padding: 6px 12px;
+}
+
+#custom-search-input.cancel.result .result-container {
+    margin: 0;
+    padding: 0;
 }
 
 #custom-search-input button{
