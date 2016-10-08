@@ -17,7 +17,7 @@ $(document).ready(function() {
 
         modal = $('#addRepository');
         modal.find('.package').text(metadata.package);
-        modal.find('a.package').attr('value', location.href);
+        modal.find('a.package').attr('href', location.href);
         modal.find('#PackageName').attr('value', location.href);
         modal.find('.repository').text(metadata.repository);
         modal.find('.packagearch').text(metadata.arch);
