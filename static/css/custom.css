@@ -133,6 +133,11 @@ input {
     color: black;
 }
 
+.disclaimer {
+    display: block;
+    text-align: center;
+}
+
 #RepositoryLabel {
     display: inline-block;
 }
