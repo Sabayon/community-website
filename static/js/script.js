@@ -14,6 +14,7 @@ $(document).ready(function() {
         var modal;
 
         adaptLocation(metadata.package);
+        $('.js-typeahead').attr('value', metadata.package);
 
         modal = $('#addRepository');
         modal.find('.package').text(metadata.package);
