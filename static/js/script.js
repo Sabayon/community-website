@@ -39,6 +39,13 @@ $(document).ready(function() {
                 typeaheadOnClickCallback(null, null, packageMetadata[0]);
             }
         }
+
+        // Visually feedback that TypeAhead is ready.
+        $('.loading').removeClass('loading');
+        $('.typeahead__search-icon').removeClass('fa')
+                                    .removeClass('fa-spinner')
+                                    .addClass('glyphicon')
+                                    .addClass('glyphicon-search');
     };
 
     adaptLocation = function(packagename) {

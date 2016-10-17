@@ -82,19 +82,19 @@ input {
 }
 
 /* Our Custom stuff */
-#custom-search-input{
+#custom-search-input {
     padding: 3px;
     border: solid 1px #E4E4E4;
     border-radius: 6px;
     background-color: #fff;
 }
 
-#custom-search-input input{
+#custom-search-input input {
     border: 0;
     box-shadow: none;
 }
 
-#custom-search-input button{
+#custom-search-input button {
     margin: 2px 0 0 0;
     background: none;
     box-shadow: none;
@@ -104,19 +104,29 @@ input {
     border-left: solid 1px #ccc;
 }
 
-#custom-search-input button:hover{
+#custom-search-input button:hover {
     border: 0;
     box-shadow: none;
     border-left: solid 1px #ccc;
 }
 
-#custom-search-input .glyphicon-search{
+#custom-search-input .typeahead__search-icon {
     font-size: 23px;
     display: inline;
     background: none;
     height: auto;
     width: auto;
     padding: 0;
+}
+
+#custom-search-input .loading {
+    font-size: 1em;
+}
+
+#custom-search-input .loading .typeahead__search-icon {
+    animation: 0.5s forwards spinner infinite;
+    background: none;
+    display: inline-block;
 }
 
 .kk-suggest-detail {
@@ -139,4 +149,22 @@ input {
 
 #PackageName {
     border: none;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
