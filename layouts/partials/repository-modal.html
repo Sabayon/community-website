@@ -1,0 +1,24 @@
+<dialog id="addRepository" aria-labelledby="RepositoryLabel">
+    <div role="document">
+        <header>
+            <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h2 id="RepositoryLabel">
+                Install <a href="#" class="package"></a>
+                <input id="PackageName" type="hidden" value="" />
+            </h2>
+        </header>
+        <div>
+            {{ with .Site.GetPage "page" "_modal/body.md" }}
+                {{ .Content }}
+            {{ end }}
+        </div>
+        <footer>
+            <button type="button" data-dismiss="modal">
+                Ok!
+            </button>
+        </footer>
+    </div>
+</dialog>

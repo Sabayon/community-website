@@ -2,7 +2,7 @@ $(document).ready(function() {
     'use strict';
 
     var template, typeaheadOnClickCallback, typeaheadResultCallback,
-        typeaheadReadyCallback, adaptLocation;
+        typeaheadEnable, typeaheadFailed, typeaheadReadyCallback, adaptLocation;
 
     template = [
         '<span>{{package}} ',
@@ -38,6 +38,23 @@ $(document).ready(function() {
         }
     };
 
+    typeaheadEnable = function () {
+        var searchInput, searchButton;
+
+        searchInput = document.querySelector('.js-typeahead');
+        searchInput.setAttribute('placeholder', 'Find Packages');
+
+        searchButton = document.querySelector('.typeahead__buton button');
+        searchButton.removeAttribute('disabled');
+    }
+
+    typeaheadFailed = function () {
+        var searchInput;
+
+        searchInput = document.querySelector('.js-typeahead');
+        searchInput.setAttribute('placeholder', 'Loading Failed. Try again later');
+    }
+
     typeaheadReadyCallback = function(data) {
         var packageName, packageMetadata;
 
@@ -52,6 +69,8 @@ $(document).ready(function() {
                 typeaheadOnClickCallback(null, null, packageMetadata[0]);
             }
         }
+
+        typeaheadEnable();
     };
 
     adaptLocation = function(packagename) {
@@ -85,6 +104,10 @@ $(document).ready(function() {
     $.ajax({
         url: "https://scrmirror.sabayonlinux.org/mirrors/sabayonlinux/community/metadata.json",
         dataType: "jsonp",
+    }).always(function (response) {
+        if (response.status === 404) {
+            typeaheadFailed();
+        }
     });
 
     if ('execCommand' in document) {

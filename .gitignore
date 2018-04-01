@@ -1,5 +1,9 @@
 # Hugo default output directory
 /public
+.hugo/
+# Track /themes but not its content
+/themes
+!/themes/.gitkeep
 
 ## OS Files
 # Windows
