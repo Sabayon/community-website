@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         {{ partial "meta.html" . }}
+        <link rel="stylesheet" href="/css/normalize.css" />
         <link rel="stylesheet" href="/css/grid.css" />
         <link rel="stylesheet" href="/css/theme.css" />
         <link rel="stylesheet" href="/css/artwork.css" />
@@ -14,10 +15,7 @@
             {{ partial "mainnav.html" . }}
         </header>
         <main>
-            <section>
-                {{ .Content }}
-            </section>
-            {{ partial "repository-modal.html" . }}
+            {{ partial "home.html" . }}
         </main>
         <footer>
             {{ partial "footer.copyright.html" . }}

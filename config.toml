@@ -3,3 +3,15 @@ languageCode = "en-us"
 title = "Sabayon Linux"
 canonifyurls = true
 
+sectionPagesMenu = "main"
+
+[menu]
+  [[menu.main]]
+    identifier = "download"
+    name = "Download"
+    url = "https://www.sabayon.org/download/"
+
+  [[menu.main]]
+    identifier = "press"
+    name = "Press"
+    url = "https://www.sabayon.org/press/"

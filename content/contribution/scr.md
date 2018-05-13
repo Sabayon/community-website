@@ -1,4 +1,6 @@
 +++
+title = "SCR"
+type = "single"
 +++
 
 # Sabayon Community Repositories
