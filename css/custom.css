@@ -1,0 +1,175 @@
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/* Our Custom stuff */
+#custom-search-input {
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input .typeahead__cancel-button {
+    z-index: 3;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+@media (min-width: 768px) {
+    #custom-search-input input{
+        width: calc(100% - 12em);
+    }
+}
+
+#custom-search-input .result-container {
+    display: none;
+}
+
+#custom-search-input.cancel .result-container {
+    display: table-cell;
+    font-size: 14px;
+    float: left;
+    height: 32px;
+    margin-right: 16px; /* cancel button is 16px wide */
+    padding: 6px 12px;
+}
+
+#custom-search-input.cancel.result .result-container {
+    margin: 0;
+    padding: 0;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+    display: inline;
+    background: none;
+    height: auto;
+    width: auto;
+    padding: 0;
+}
+
+.kk-suggest-detail {
+    float: right;
+    color: #8a8a8a;
+    font-size: 90%;
+}
+
+.arch {
+    color: orange;
+}
+
+.modal {
+    color: black;
+}
+
+.disclaimer {
+    display: block;
+    text-align: center;
+}
+
+#RepositoryLabel {
+    display: inline-block;
+}
+
+#PackageName {
+    border: none;
+}
