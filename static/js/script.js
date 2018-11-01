@@ -1,8 +1,24 @@
 $(document).ready(function() {
     'use strict';
 
-    var template, typeaheadOnClickCallback, typeaheadResultCallback,
-        typeaheadReadyCallback, adaptLocation;
+    var availableRepos, template, typeaheadOnClickCallback,
+        typeaheadResultCallback, typeaheadReadyCallback, adaptLocation;
+
+    availableRepos = [
+        'community',
+        'devel',
+        'elementary',
+        'gaming-live',
+        'haskell',
+        'kdepim',
+        'mudler',
+        'pentesting',
+        'science',
+        'sihnon-common',
+        'sihnon-desktop',
+        'sihnon-server',
+        'unity'
+    ];
 
     template = [
         '<span>{{package}} ',
@@ -98,4 +114,31 @@ $(document).ready(function() {
             $copyInput.attr('type', 'hidden');
         });
     }
+
+    $('#custom-search-input').after([
+        '<ul class="repositories">',
+        availableRepos.map(function(repo) {
+            return '<li><button type="button">' + repo + '</button></li>';
+        }).join(''),
+        '</ul>',
+        '<div class="repository-feed">',
+        '</div>'
+    ].join(''));
+
+    if (!('rss' in $.fn)) {
+        $(document.body).append('<script type="text/javascript" src="/community-website/js/jquery.rss.min.js"></script>');
+    }
+
+    $('.repositories').on('click', function(event) {
+        var repositoryName, feedUrl;
+
+        repositoryName = $(event.target).find('button').text();
+        feedUrl = 'http://mirror.it.sabayon.org/community/community/standard/community/database/amd64/5/updates.rss';
+
+        $('.repository-feed').rss(feedUrl, {
+            ssl: true,
+            entryTemplate: '<li><a href="{url}">{title}</a><br />{shortBodyPlain}</li>',
+            layoutTemplate: '<ul style="list-style:none;padding:0;">{entries}</ul>'
+        });
+    });
 });
